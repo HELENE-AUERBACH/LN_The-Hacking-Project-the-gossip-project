@@ -116,3 +116,8 @@ ID | CONTENT                        | AUTHOR.FIRST_NAME | AUTHOR.LAST_NAME | GOS
 11 | Totam odio sint. Nobis quam... | Carlyn            | White            | Quo                           
 12 | Consequuntur dolorum volupt... | Kelsey            | Conn             | Occaecati voluptas  
 
+URLs :
+http://localhost:3000/
+http://localhost:3000/team
+http://localhost:3000/contact
+http://localhost:3000/welcome/...
