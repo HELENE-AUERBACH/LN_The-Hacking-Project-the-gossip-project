@@ -1,0 +1,39 @@
+<style type="text/css">
+  table {
+    margin:auto;
+  }
+  table,
+  td {
+    border: 1px solid #333;
+  }
+
+  thead,
+  tfoot {
+    background-color: #333;
+    color: #fff;
+  }
+</style>
+
+<div>
+  <h1>Bienvenue sur l'application de la communauté de <em>"The Hacking Project"</em></h1>
+  <table>
+    <caption>Voici la liste des potins qui circulent...</caption>
+    <thead>
+      <tr>
+        <th>Prénom de l'auteur</th>
+        <th>Titre</th>
+        <th>Page</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @gossips.each_with_index do |gossip, index| %>
+        <tr>
+          <td><%= gossip.author.first_name %></td>
+          <td><%= gossip.title %></td>
+          <% gossip_number = index + 1 %>
+          <td><%= link_to "Potin n°#{gossip_number}", gossip_path(gossip_number) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
