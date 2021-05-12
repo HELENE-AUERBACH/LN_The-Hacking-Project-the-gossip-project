@@ -26,12 +26,11 @@
       </tr>
     </thead>
     <tbody>
-      <% @gossips.each_with_index do |gossip, index| %>
+      <% @gossips.each do |gossip| %>
         <tr>
           <td><%= gossip.author.first_name %></td>
           <td><%= gossip.title %></td>
-          <% gossip_number = index + 1 %>
-          <td><%= link_to "Potin n°#{gossip_number}", gossip_path(gossip_number) %></td>
+          <td><%= link_to "Potin n°#{gossip.id}", gossip_path(gossip.id) %></td>
         </tr>
       <% end %>
     </tbody>
